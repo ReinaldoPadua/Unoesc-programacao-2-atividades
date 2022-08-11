@@ -77,13 +77,13 @@ public class FirstClass {
         if(novaString.equals("verdadeiro")) {
             System.out.println("È verdade");
         }
-//
-//        String  auxString= "Verdadeiro";
-//
-//        if(novaString.equals(auxString)) {
-//            System.out.println("É verdade");
-//        }
-//
+
+        String  auxString= "Verdadeiro";
+
+        if(novaString.equals(auxString)) {
+            System.out.println("É verdade");
+        }
+
         if(novaString.equals(auxString) && novaString.startsWith("Y")) {
             System.out.println("É verdade");
         } else if(novaString.startsWith("Y") || novaString.endsWith("z")) {
