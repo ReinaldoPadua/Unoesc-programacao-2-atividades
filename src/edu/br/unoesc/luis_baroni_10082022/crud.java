@@ -1,4 +1,4 @@
-package luis_baroni_10082022;
+package edu.br.unoesc.luis_baroni_10082022;
 
 import java.util.Scanner;
 
