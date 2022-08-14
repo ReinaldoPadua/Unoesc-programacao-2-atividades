@@ -157,7 +157,7 @@ public class Exercicio_1 {
                 for(String certificado : colaborador.getCertificados()){
                     System.out.printf("%s ", certificado);
                 }
-                System.out.println("...");
+                System.out.println("\n...");
             }
 
         }
