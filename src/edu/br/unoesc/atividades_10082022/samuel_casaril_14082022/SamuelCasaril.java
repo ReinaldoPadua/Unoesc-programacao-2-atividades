@@ -1,4 +1,4 @@
-package edu.br.unoesc;
+package edu.br.unoesc.atividades_10082022.samuel_casaril_14082022;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -10,7 +10,7 @@ class SamuelCasaril {
         Scanner Input = new Scanner(System.in);
 
         String name, cpf, adress, depart, function, certifics;
-        int birthDate, Wage, nCertifics, Years, wageYear;
+        int dataNasc, salario, nCertifics, anos, salarioAno;
         
         ArrayList<String> certificsArray = new ArrayList<String>();
 
@@ -20,9 +20,9 @@ class SamuelCasaril {
         cpf = Input.next();
 
         System.out.printf("Ano nascimento: ");
-        DataNasc = Input.nextInt();
+        dataNasc = Input.nextInt();
         Input.nextLine();
-        anos = 2022 - DataNasc;
+        anos = 2022 - dataNasc;
         System.out.printf("Endereço: ");
         adress = Input.nextLine();
 

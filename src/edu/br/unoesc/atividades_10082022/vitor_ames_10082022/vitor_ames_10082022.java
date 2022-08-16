@@ -1,7 +1,5 @@
-package edu.br.unoesc.vitor_ames_10082022;
+package edu.br.unoesc.atividades_10082022.vitor_ames_10082022;
 
-import java.text.DecimalFormat;
-import java.util.Date;
 import java.util.Scanner;
 
 public class vitor_ames_10082022 {

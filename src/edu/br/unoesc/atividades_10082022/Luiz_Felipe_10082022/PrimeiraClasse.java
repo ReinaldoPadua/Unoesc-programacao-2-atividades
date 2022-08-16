@@ -1,56 +1,57 @@
-package edu.br.unoesc.Arthur_Freddo_10082022;
+package Luiz_Felipe_10082022;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class ArthurClass {
-    public static void main(String[] args){
+
+public class PrimeiraClasse {
+
+
+    public static void main(String ars[]) {
         ArrayList<String> lista = new ArrayList<>();
         Scanner input = new Scanner(System.in);
         // input = objeto, scanner = classe
         String nome;
-        System.out.println("Insira seu nome:");
+        System.out.println("Informe seu nome:");
         nome = input.nextLine();
 
-
         String cpf;
-        System.out.println("Insira seu CPF:");
+        System.out.println("Informe seu CPF:");
         cpf = input.nextLine();
 
-
-        int ano_nascimento;
+        int AnoNascimento;
         int idade;
-        System.out.println("Insira seu ano de nascimento: ");
-        ano_nascimento = input.nextInt();
-        idade = 2022 - ano_nascimento;
+        System.out.println("Informe seu ano de nascimento: ");
+        AnoNascimento = input.nextInt();
+        idade = 2022 - AnoNascimento;
 
 
-        String cidade, bairro, rua, cep;
-        System.out.println("Informe Endereço");{
+        String cidade, bairro, rua, CEP;
+        System.out.println("Insira informações sobre seu endereço:");{
 
             input.nextLine();
 
-            System.out.println("Cidade:");
+            System.out.println("Sua cidade:");
             cidade = input.nextLine();
-            System.out.println("Bairro:");
+            System.out.println("Seu bairro:");
             bairro = input.nextLine();
-            System.out.println("Rua:");
+            System.out.println("Sua rua:");
             rua = input.nextLine();
-            System.out.println("CEP:");
-            cep = input.nextLine();
+            System.out.println("Seu CEP:");
+            CEP = input.nextLine();
         }
 
-        double salario_mes;
-        double salario_ano;
-        System.out.println("Informe a Renda Mensal (em reais e separando os centamos com ',' ):");
-        salario_mes = input.nextDouble();
+        double SalarioMes;
+        double SalarioAno;
+        System.out.println("Informe sua renda mensal (em reais e separar com ',' para informar os centavos):");
+        SalarioMes = input.nextDouble();
         input.nextLine();
-        salario_ano = salario_mes * 12;
+        SalarioAno = SalarioMes * 12;
 
 
         String departamento;
-        System.out.println("Digite o departamento:");
+        System.out.println("Informe o departamento:");
         departamento = input.nextLine();
 
 
@@ -72,15 +73,15 @@ public class ArthurClass {
 
 
         System.out.println("Nome do Colaborador: " + nome);
-        System.out.println("Cadastro de Pessoa Fisica: " + cpf);
-        System.out.println("Ano de Nascimento: " + ano_nascimento);
-        System.out.println("Endereço: " + cidade + ", Bairro " + bairro + ", Rua " + rua + ", CEP " + cep);
-        System.out.println("Salário Mensal: R$" + new DecimalFormat("#.##").format(salario_mes));
+        System.out.println("CPF: " + cpf);
+        System.out.println("Ano de Nascimento: " + AnoNascimento);
+        System.out.println("Endereço: " + cidade + ", Bairro " + bairro + ", Rua " + rua + ", CEP " + CEP);
+        System.out.println("Salário Mensal: R$" + new DecimalFormat("#.##").format(SalarioMes));
         System.out.println("Departamento: " + departamento);
         System.out.println("Função: " + funcao);
         System.out.println("Número de Certificados: " + contador);
         System.out.println("Certificados de Formação: " + lista);
-        System.out.println("Salario Anual: R$"+ new DecimalFormat("#.##").format(salario_ano));
+        System.out.println("Salario Anual: R$"+ new DecimalFormat("#.##").format(SalarioAno));
         System.out.println("Idade Atual: " + idade + " anos");
 
         input.close();

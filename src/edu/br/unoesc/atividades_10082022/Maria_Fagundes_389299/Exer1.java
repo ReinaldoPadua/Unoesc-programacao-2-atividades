@@ -1,4 +1,4 @@
-package Maria_Fagundes_389299;
+package edu.br.unoesc.atividades_10082022.Maria_Fagundes_389299;
 
 import java.util.Scanner;
 
