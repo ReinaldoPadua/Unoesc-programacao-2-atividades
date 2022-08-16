@@ -2,7 +2,7 @@ package edu.br.unoesc.atividades_10082022.samuel_casaril_14082022;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-
+// tudo ok
 class SamuelCasaril {
     
     public static void main(String[] args) {

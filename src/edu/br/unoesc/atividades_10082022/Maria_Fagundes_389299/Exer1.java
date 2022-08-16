@@ -1,7 +1,7 @@
 package edu.br.unoesc.atividades_10082022.Maria_Fagundes_389299;
 
 import java.util.Scanner;
-
+// Tudo ok
 public class Exer1 {
 
     public  static  void main(String ars[]){

@@ -1,7 +1,7 @@
 package edu.br.unoesc.atividades_10082022.vitor_ames_10082022;
 
 import java.util.Scanner;
-
+// tudo ok
 public class vitor_ames_10082022 {
     public static void main(String[] args){
 

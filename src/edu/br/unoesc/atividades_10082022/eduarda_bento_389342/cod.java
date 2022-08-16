@@ -1,6 +1,8 @@
-package eduarda_bento_389342;
+package edu.br.unoesc.atividades_10082022.eduarda_bento_389342;
 
 import java.util.Scanner;
+
+// Tudo ok
 
 public class cod {
 

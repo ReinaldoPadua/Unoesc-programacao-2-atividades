@@ -4,6 +4,9 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+
+//Tudo ok!
+
 public class ArthurClass {
     public static void main(String[] args){
         ArrayList<String> lista = new ArrayList<>();

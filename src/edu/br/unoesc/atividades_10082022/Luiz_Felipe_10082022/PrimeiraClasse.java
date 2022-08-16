@@ -1,4 +1,4 @@
-package Luiz_Felipe_10082022;
+package edu.br.unoesc.atividades_10082022.Luiz_Felipe_10082022;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -7,6 +7,7 @@ import java.util.Scanner;
 
 public class PrimeiraClasse {
 
+// Tudo ok
 
     public static void main(String ars[]) {
         ArrayList<String> lista = new ArrayList<>();

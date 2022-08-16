@@ -1,7 +1,7 @@
-package rafaeldesanti;
+package edu.br.unoesc.atividades_10082022.rafael_desanti_10082022;
 
 import java.util.*;
-
+// Tudo ok
 public class projeto1 {
 
 

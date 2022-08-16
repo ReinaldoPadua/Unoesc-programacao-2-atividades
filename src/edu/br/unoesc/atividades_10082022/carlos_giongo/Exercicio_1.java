@@ -1,10 +1,12 @@
-package edu.br.unoesc.carlos_giongo;
+package edu.br.unoesc.atividades_10082022.carlos_giongo;
 import java.lang.reflect.Array;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.List;
+
+// Fez uso de classe, parabéns :)
 
 class Colaborador {
     String _nome;

@@ -1,8 +1,10 @@
-package edu.br.unoesc.Miguel_Sousa_10082022;
+package edu.br.unoesc.atividades_10082022.Miguel_Sousa_10082022;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Scanner;
+
+// Tudo
 
 public class MiguelClass {
     public static void main(String[] args){

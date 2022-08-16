@@ -1,10 +1,10 @@
-package edu.br.unoesc.Samuel_Silva_10082022;
+package edu.br.unoesc.atividades_10082022.Samuel_Silva_10082022;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
+// tudo ok
 public class Atividade1 {
     public Atividade1() {
     }

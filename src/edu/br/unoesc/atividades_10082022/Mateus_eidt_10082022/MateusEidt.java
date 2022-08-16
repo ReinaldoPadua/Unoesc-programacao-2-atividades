@@ -1,9 +1,10 @@
-package edu.br.unoesc;
+package edu.br.unoesc.atividades_10082022.Mateus_eidt_10082022;
 
 
 import java.util.Scanner;
 import java.util.ArrayList;
 
+// Faltou o public class, fora isso tudo ok
 
 class MateusEidt {
     public static void main(String[] args) {

@@ -3,7 +3,7 @@ package edu.br.unoesc.atividades_10082022.Eduardo_Mortari_10082022;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Scanner;
-
+// Tudo ok
 public class PrimeiraClasse {
     public static void main(String[] args){
         ArrayList<String> lista = new ArrayList<>();
