@@ -78,11 +78,11 @@ public class FirstClass {
             System.out.println("È verdade");
         }
 //
-        String  auxString= "Verdadeiro";
-
-        if(novaString.equals(auxString)) {
-            System.out.println("É verdade");
-        }
+//        String  auxString= "Verdadeiro";
+//
+//        if(novaString.equals(auxString)) {
+//            System.out.println("É verdade");
+//        }
 //
         if(novaString.equals(auxString) && novaString.startsWith("Y")) {
             System.out.println("É verdade");
