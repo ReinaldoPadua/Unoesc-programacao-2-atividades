@@ -10,7 +10,6 @@ public class VitorZanchetFormulario {
             System.out.println("Entre com o seu nome: ");
             String nome = teclado.nextLine();
 
-
             System.out.println("Entre com o seu cpf: ");
             String cpf = teclado.nextLine();
 
