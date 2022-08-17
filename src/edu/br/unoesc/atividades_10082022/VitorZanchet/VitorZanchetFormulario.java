@@ -1,4 +1,4 @@
-package VitorZanchet;
+package edu.br.unoesc.atividades_10082022.VitorZanchet;
 import java.util.Scanner;
 
 public class VitorZanchetFormulario {
