@@ -1,14 +1,8 @@
-package edu.br.unoesc.simulador_de_carros;
+package edu.br.unoesc.simulador_veicular;
 
-public class Carro {
+public class Carro extends Veiculo {
 
-    private String modelo;
-
-    private String fabricante;
-
-    private Integer ano;
-
-    private Cambio cambio;
+    private tipoCambio cambio;
 
     private Double velocidadeMaxima;
 
@@ -16,9 +10,7 @@ public class Carro {
 
     private Boolean temCombustivel;
 
-    private Boolean ligado;
-
-    public Carro(String modelo, String fabricante, Integer ano, Cambio cambio, Double velocidadeMaxima){
+    public Carro(String modelo, String fabricante, Integer ano, tipoCambio cambio, Double velocidadeMaxima){
         super();
         this.modelo=modelo;
         this.fabricante= fabricante;
@@ -52,6 +44,12 @@ public class Carro {
         this.ligado = false;
 
         return  true;
+    }
+
+    public Boolean trocaMarcha(Boolean aumentar){
+        if((aumentar && this.cambio.subirMarcha()) ||this.cambio.reduzirMarcha())
+            return true;
+        return false;
     }
 
     public Boolean acelerar(){

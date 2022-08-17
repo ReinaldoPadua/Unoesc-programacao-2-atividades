@@ -96,6 +96,7 @@ class Colaborador {
 }
 
 public class Exercicio_1 {
+
         public static void main(String ars[]){
             List<Colaborador> Colaboradores = new ArrayList<Colaborador>();
             boolean continuar = true;
