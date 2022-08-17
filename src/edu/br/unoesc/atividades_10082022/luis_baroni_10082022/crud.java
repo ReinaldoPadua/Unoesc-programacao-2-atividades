@@ -1,7 +1,7 @@
-package edu.br.unoesc.luis_baroni_10082022;
+package edu.br.unoesc.atividades_10082022.luis_baroni_10082022;
 
 import java.util.Scanner;
-
+// Tudo ok
 public class crud {
     public static void main(String arg[]) {
 
