@@ -55,8 +55,9 @@ public class Carro {
     }
 
     public Boolean trocaMarcha(Boolean aumentar){
-        if((aumentar && this.cambio.subirMarcha()) ||this.cambio.reduzirMarcha())
+        if((aumentar && this.cambio.subirMarcha()) ||this.cambio.reduzirMarcha()) {
             return true;
+        }
         return false;
     }
 
@@ -70,7 +71,7 @@ public class Carro {
         return false;
     };
 
-    private Boolean validarTrocaMarcha() {
+    public Boolean validarTrocaMarcha() {
         return this.velocidadeAtual < this.retornarVelocidadeMaximaPorMarcha() * this.cambio.getMarchaAtual();
     }
 
@@ -78,7 +79,7 @@ public class Carro {
         return this.velocidadeMaxima/this.cambio.getNumeroMarchas();
     }
 
-    private void frear(){
+    public void frear(){
         if(this.velocidadeAtual>0){
             this.velocidadeAtual -= this.retornarVelocidadeMaximaPorMarcha();
         }

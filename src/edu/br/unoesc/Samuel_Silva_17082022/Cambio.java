@@ -16,6 +16,10 @@ public class Cambio {
     }
 
     public Boolean subirMarcha(){
+        if(this.marchaAtual<this.numeroMarchas) {
+            this.marchaAtual++;
+            return true;
+        }
         return false;
     }
 

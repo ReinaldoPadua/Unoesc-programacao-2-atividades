@@ -14,14 +14,24 @@ public class SimuladorAutomotivo {
                 printf("Ligado!");
         else printf("Não foi possivel ligar");
 
-        if(carro.acelerar()) {
+        if(carro.trocaMarcha(true).equals(true)) {
+            printf("trocou de marcha");
+        }
+
+        if(carro.acelerar().equals(true)) {
             printf("Acelerando");
             printf(new StringBuilder().append("Velocidade Atual: ").append(carro.getVelocidadeAtual()).toString());
         }
         else printf("Não foi possivel acelerar");
 
-        //carro.frear();
-        //printf(new StringBuilder().append("Velocidade Atual: ").append(carro.getVelocidadeAtual()).toString());
+
+        if(carro.trocaMarcha(false).equals(true)) {
+            printf("reduziu de marcha");
+        }
+
+        carro.frear();
+        printf(new StringBuilder().append("Velocidade Atual: ").append(carro.getVelocidadeAtual()).toString());
+        carro.desligar();
 
         if(carro.desligar()) {
             printf("Desligado!");
