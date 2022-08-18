@@ -1,4 +1,4 @@
-package carlos_giongo_17082022;
+package edu.br.unoesc.carlos_giongo_17082022;
 
 public class Carro {
 
@@ -45,17 +45,18 @@ public class Carro {
     }
 
     public Boolean desligar(){
-        if(!this.ligado && this.cambio.getMarchaAtual()!=0)
+        if(!this.ligado && this.cambio.getMarchaAtual() != 0 && this.velocidadeAtual != 0){
             return false;
-
-        this.velocidadeAtual=0.00;
+        }
         this.ligado = false;
-
-        return  true;
+        return true;
     }
 
     public Boolean trocaMarcha(Boolean aumentar){
-        return (aumentar && this.cambio.subirMarcha()) || this.cambio.reduzirMarcha();
+        if(this.ligado){
+            return (aumentar && this.cambio.subirMarcha()) || this.cambio.reduzirMarcha();
+        }
+        return false;
     }
 
     public Boolean acelerar(){
@@ -80,7 +81,7 @@ public class Carro {
     }
 
     public Boolean frear(){
-        if(this.velocidadeAtual > 0){
+        if(this.velocidadeAtual > 0 && this.ligado){
             this.velocidadeAtual -= this.retornarVelocidadeMaximaPorMarcha();
             return true;
         }

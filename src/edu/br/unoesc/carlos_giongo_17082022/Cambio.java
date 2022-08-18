@@ -1,4 +1,4 @@
-package carlos_giongo_17082022;
+package edu.br.unoesc.carlos_giongo_17082022;
 
 public class Cambio {
 

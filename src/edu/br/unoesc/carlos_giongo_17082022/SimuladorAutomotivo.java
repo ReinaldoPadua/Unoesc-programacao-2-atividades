@@ -1,4 +1,4 @@
-package carlos_giongo_17082022;
+package edu.br.unoesc.carlos_giongo_17082022;
 
 import java.util.Scanner;
 
@@ -45,13 +45,13 @@ public class SimuladorAutomotivo {
                     break;
                 case 2:
                     if(carro.trocaMarcha(true))
-                        printf("Subindo marcha");
+                        printf("Subindo marcha.. Velocidade Atual: " + carro.getVelocidadeAtual());
                     else printf("Não foi possivel subir marcha");
                     break;
                 case 3:
                     if(carro.trocaMarcha(false)){
                         carro.frear();
-                        printf("Descendo marcha");
+                        printf("Descendo marcha.. Velocidade Atual: " + carro.getVelocidadeAtual());
                     } else printf("Não foi possivel descendo marcha");
                     break;
                 case 4:
