@@ -45,7 +45,7 @@ public class Carro {
     }
 
     public Boolean desligar(){
-        if(!this.ligado && this.cambio.getMarchaAtual() != 0 && this.velocidadeAtual != 0){
+        if((!this.ligado && this.cambio.getMarchaAtual() != 0) || this.velocidadeAtual != 0){
             return false;
         }
         this.ligado = false;
