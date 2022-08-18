@@ -11,7 +11,7 @@ public class SimuladorAutomotivo {
                 220.00);
 
         if(carro.ligar().equals(true))
-                printf("Ligado!");
+            printf("Ligado!");
         else printf("Não foi possivel ligar");
 
         if(carro.acelerar()) {
