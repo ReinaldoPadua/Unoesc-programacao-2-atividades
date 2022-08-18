@@ -1,4 +1,4 @@
-package edu.br.unoesc.simulador_de_carros;
+package Pedro_Folle_17082022;
 
 public class Cambio {
 
@@ -15,9 +15,14 @@ public class Cambio {
         this.marchaAtual = 0;
     }
 
-    public Boolean subirMarcha(){
+    public Boolean subirMarcha() {
+        if (this.marchaAtual < this.numeroMarchas) {
+            this.marchaAtual++;
+            return true;
+
+        }
         return false;
-    }
+    };
 
     public Boolean reduzirMarcha(){
         if(this.marchaAtual>0){
@@ -25,7 +30,7 @@ public class Cambio {
             return true;
         }
         return false;
-    }
+    };
 
     public Boolean engatarMarchaRe(){
         if(this.marchaAtual<=this.numeroMarchas){
