@@ -1,4 +1,4 @@
-package edu.br.unoesc.simulador_de_carros;
+package edu.br.unoesc.Bernardo_17082022;
 
 public class Carro {
 
@@ -54,9 +54,15 @@ public class Carro {
         return  true;
     }
 
+    public Boolean trocaMarcha(Boolean aumentar){
+        if((aumentar && this.cambio.subirMarcha()) ||this.cambio.reduzirMarcha())
+            return true;
+        return false;
+    }
+
     public Boolean acelerar(){
         if(this.ligado.equals(true)&&this.velocidadeAtual<this.velocidadeMaxima && this.validarTrocaMarcha()
-        && this.cambio.getMarchaAtual()!=0){
+                && this.cambio.getMarchaAtual()!=0){
             this.velocidadeAtual += this.retornarVelocidadeMaximaPorMarcha();
             return true;
         }

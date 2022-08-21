@@ -1,17 +1,17 @@
-package edu.br.unoesc.simulador_de_carros;
+package edu.br.unoesc.Bernardo_17082022;
 
 public class SimuladorAutomotivo {
 
 
     public  static  void main(String ars[]){
 
-        Cambio cambioManual = new Cambio(true,5);
+        Cambio cambioManual = new Cambio(false,5);
 
         Carro carro = new Carro("Corsa GSI","GM",1998,cambioManual,
                 220.00);
 
         if(carro.ligar().equals(true))
-                printf("Ligado!");
+            printf("Ligado!");
         else printf("Não foi possivel ligar");
 
         if(carro.acelerar()) {
@@ -34,7 +34,4 @@ public class SimuladorAutomotivo {
     private static void printf(String msg){
         System.out.println(msg);
     }
-
-
-
 }
