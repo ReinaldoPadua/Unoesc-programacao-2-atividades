@@ -85,5 +85,7 @@ public class Carro {
         }
     }
 
-
+    public Cambio getCambio() {
+        return this.cambio;
+    }
 }
