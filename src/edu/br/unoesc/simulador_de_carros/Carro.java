@@ -18,22 +18,18 @@ public class Carro {
 
     private Boolean ligado;
 
+    // construtor para exibir informações do corsa
     public Carro(String modelo, String fabricante, Integer ano, Cambio cambio, Double velocidadeMaxima){
         super();
         this.modelo=modelo;
         this.fabricante= fabricante;
         this.ano=ano;
         this.cambio=cambio;
-        this.velocidadeMaxima=velocidadeMaxima;
+        this.velocidadeMaxima= 220.00;
         this.velocidadeAtual=0.00;
         this.temCombustivel=true;
         this.ligado=false;
     }
-
-    public Double getVelocidadeAtual(){
-        return this.velocidadeAtual;
-    }
-
 
     public Boolean ligar(){
         if(this.ligado.equals(true)||this.temCombustivel.equals(false) || this.cambio.getMarchaAtual()!=0)
@@ -54,21 +50,30 @@ public class Carro {
         return  true;
     }
 
-    public Boolean trocaMarcha(Boolean aumentar){
-        if((aumentar && this.cambio.subirMarcha()) ||this.cambio.reduzirMarcha())
-            return true;
-        return false;
+    public Double getVelocidadeAtual(){
+        return this.velocidadeAtual;
     }
 
     public Boolean acelerar(){
-        if(this.ligado.equals(true)&&this.velocidadeAtual<this.velocidadeMaxima && this.validarTrocaMarcha()
-        && this.cambio.getMarchaAtual()!=0){
+        while(this.ligado.equals(true)&&this.velocidadeAtual<this.velocidadeMaxima && this.validarTrocaMarcha()
+                && this.cambio.getMarchaAtual()!=0 && cambio.getMarchaAtual() <= 5){
+
             this.velocidadeAtual += this.retornarVelocidadeMaximaPorMarcha();
             return true;
-        }
 
-        return false;
-    };
+
+        }return false;
+    }
+
+    public Boolean freiar(){
+        while(this.cambio.getMarchaAtual()>=0 && cambio.getMarchaAtual() <= 5){
+
+            this.velocidadeAtual -= this.retornarVelocidadeMaximaPorMarcha();
+            return false;
+
+
+        }return true;
+    }
 
     private Boolean validarTrocaMarcha() {
         return this.velocidadeAtual < this.retornarVelocidadeMaximaPorMarcha() * this.cambio.getMarchaAtual();
@@ -76,6 +81,7 @@ public class Carro {
 
     private Double retornarVelocidadeMaximaPorMarcha(){
         return this.velocidadeMaxima/this.cambio.getNumeroMarchas();
+        // Se numero de marchas == 5 numero é fixo em 44km/h a cada marcha
     }
 
     private void frear(){
