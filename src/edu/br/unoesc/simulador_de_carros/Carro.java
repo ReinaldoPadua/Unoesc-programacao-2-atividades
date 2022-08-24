@@ -1,4 +1,7 @@
-package edu.br.unoesc.simulador_de_carros;
+package Eduardo_Mortari_17082022;
+
+import Eduardo_Mortari_17082022.Cambio;
+import Eduardo_Mortari_17082022.SimuladorAutomotivo;
 
 public class Carro {
 
@@ -10,7 +13,7 @@ public class Carro {
 
     private Cambio cambio;
 
-    private Double velocidadeMaxima;
+    private Double velocidadeMax;
 
     private Double velocidadeAtual;
 
@@ -18,71 +21,82 @@ public class Carro {
 
     private Boolean ligado;
 
-    public Carro(String modelo, String fabricante, Integer ano, Cambio cambio, Double velocidadeMaxima){
+
+    public Carro(String modelo, String fabricante, Integer ano, Eduardo_Mortari_17082022.Cambio cambio, Double velocidadeMax) {
         super();
-        this.modelo=modelo;
-        this.fabricante= fabricante;
-        this.ano=ano;
-        this.cambio=cambio;
-        this.velocidadeMaxima=velocidadeMaxima;
-        this.velocidadeAtual=0.00;
-        this.temCombustivel=true;
-        this.ligado=false;
+        this.modelo = modelo;
+        this.fabricante = fabricante;
+        this.ano = ano;
+        this.cambio = cambio;
+        this.velocidadeMax = velocidadeMax;
+        this.velocidadeAtual = 0.00;
+        this.temCombustivel = true;
+        this.ligado = false;
     }
 
-    public Double getVelocidadeAtual(){
+    public Double getVelocidadeAtual() {
         return this.velocidadeAtual;
     }
 
 
-    public Boolean ligar(){
-        if(this.ligado.equals(true)||this.temCombustivel.equals(false) || this.cambio.getMarchaAtual()!=0)
+    public Boolean ligar() {
+
+        if (this.ligado.equals(true) || this.temCombustivel.equals(false) || this.cambio.getMarchaAtual() != 0)
             return false;
 
-        this.ligado=true;
+        this.ligado = true;
 
         return true;
     }
 
-    public Boolean desligar(){
-        if(this.ligado.equals(false) && this.cambio.getMarchaAtual()!=0)
+    public Boolean desligar() {
+        if (this.ligado.equals(false) && this.cambio.getMarchaAtual() != 0)
             return false;
 
-        this.velocidadeAtual=0.00;
+        this.velocidadeAtual = 0.00;
         this.ligado = false;
 
-        return  true;
+        return true;
     }
 
     public Boolean trocaMarcha(Boolean aumentar){
-        if((aumentar && this.cambio.subirMarcha()) ||this.cambio.reduzirMarcha())
+        if ((aumentar &&this.cambio.subirMarcha()) || this.cambio.reduzirMarcha()){
             return true;
+        }
         return false;
     }
 
-    public Boolean acelerar(){
-        if(this.ligado.equals(true)&&this.velocidadeAtual<this.velocidadeMaxima && this.validarTrocaMarcha()
-        && this.cambio.getMarchaAtual()!=0){
+    public Boolean acelerar() {
+
+        if (this.ligado.equals(true) && this.velocidadeAtual < this.velocidadeMax && this.validarTrocaMarcha()
+                && this.cambio.getMarchaAtual() != 0) {
             this.velocidadeAtual += this.retornarVelocidadeMaximaPorMarcha();
+
             return true;
         }
 
         return false;
-    };
+    }
 
-    private Boolean validarTrocaMarcha() {
+    ;
+
+    public Boolean validarTrocaMarcha() {
         return this.velocidadeAtual < this.retornarVelocidadeMaximaPorMarcha() * this.cambio.getMarchaAtual();
+
     }
 
-    private Double retornarVelocidadeMaximaPorMarcha(){
-        return this.velocidadeMaxima/this.cambio.getNumeroMarchas();
+    public Double retornarVelocidadeMaximaPorMarcha() {
+        return this.velocidadeMax / this.cambio.getNumerodeMarchas();
     }
 
-    private void frear(){
-        if(this.velocidadeAtual>0){
+    public Boolean frear() {
+        if (this.velocidadeAtual > 0) {
             this.velocidadeAtual -= this.retornarVelocidadeMaximaPorMarcha();
         }
+        return true;
+
+
+    }
     }
 
 
-}
