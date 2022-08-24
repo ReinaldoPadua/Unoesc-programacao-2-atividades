@@ -15,13 +15,23 @@ public class Cambio {
         this.marchaAtual = 0;
     }
 
-    public Boolean subirMarcha(){
+    public boolean subirMarcha(){
+        for(int i = 1; i <=5; ++i)
+        {
+            if(this.marchaAtual >= 0 && this.marchaAtual <= 4){
+                this.marchaAtual++;
+            }else break;
+            return true;
+        }
         return false;
     }
 
-    public Boolean reduzirMarcha(){
-        if(this.marchaAtual>0){
-            this.marchaAtual--;
+    public boolean reduzirMarcha(){
+        for(int i = 5; i > 0; --i)
+        {
+            if(this.marchaAtual > 0){
+                this.marchaAtual--;
+            }else break;
             return true;
         }
         return false;
